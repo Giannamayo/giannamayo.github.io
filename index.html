@@ -24,7 +24,32 @@ input,select,textarea{width:100%;border:1px solid #cad6ce;background:#fcfdfb;bor
 .location{display:flex;gap:8px;align-items:center}.location input{min-width:220px}
 .matches{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.match{padding:0;overflow:hidden}.photo{height:180px;background:linear-gradient(145deg,#dce9df,#f5d8bb);display:grid;place-items:center;font-size:85px;position:relative}.score{position:absolute;right:12px;top:12px;background:white;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900;color:var(--green)}.match-body{padding:18px}.match h3{font-size:22px;margin:0 0 4px}.meta{font-size:13px;color:var(--muted)}.tags{display:flex;gap:6px;flex-wrap:wrap;margin:13px 0}.tag{background:var(--sage);border-radius:999px;padding:5px 8px;font-size:11px;font-weight:700}.match .actions{margin-top:12px}.match .actions button{flex:1}
 .notice{padding:12px 15px;border-radius:14px;background:#e7f1e9;color:var(--green);font-size:13px;margin-bottom:18px;display:none}.notice.show{display:block}.interest-list{display:grid;gap:12px}.interest{display:flex;align-items:center;gap:14px}.mini{width:54px;height:54px;border-radius:16px;background:var(--sage);display:grid;place-items:center;font-size:31px}.empty{color:var(--muted);padding:30px;text-align:center;border:1px dashed #bdcbbf;border-radius:20px}
-footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  color:var(--muted);
+  font-size:12px;
+  padding:25px 20px;
+}
+
+.footer-photo{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--sage);
+}
+
+.footer-text{
+  text-align:left;
+}
+
+.footer-text strong{
+  color:var(--green);
+  font-size:13px;
+}
 @media(max-width:800px){.hero{grid-template-columns:1fr}.matches{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}nav .navbtn{padding:8px;font-size:12px}}
 @media(max-width:560px){.matches{grid-template-columns:1fr}.nav{flex-wrap:wrap}.brand{width:100%}nav{margin:0}.section-head{align-items:stretch;flex-direction:column}.location{align-items:stretch;flex-direction:column}.location input{min-width:0}h1{letter-spacing:-2px}}
 </style>
@@ -81,8 +106,18 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
  <div id="interestList" class="interest-list"></div>
 </section>
 </main>
-<footer>Fetch Link • A playful neighborhood dog-matching concept • Demo data only</footer>
+<footer>
+  <img
+    src="gianna-bear.jpg"
+    alt="Gianna Mayo and Bear"
+    class="footer-photo"
+  >
 
+  <div class="footer-text">
+    <strong>Created by Gianna Mayo & Bear 🐾</strong><br>
+    Fetch Link • A playful neighborhood dog-matching concept
+  </div>
+</footer>
 <script>
 const temperamentOptions=["Playful","High-energy","Calm","Gentle","Shy","Confident","Social butterfly","Independent","Cuddly","Curious","Goofy","Patient","Protective","Vocal","Quiet","Puppy-like","Senior & mellow","Loves everyone","Prefers small groups","Prefers one-on-one","Dog-selective","Good with puppies","Good with seniors","Likes rough play","Likes gentle play","Ball obsessed","Chase lover","Sniff & stroll","Needs personal space"];
 const sampleDogs=[
